@@ -1,3 +1,8 @@
+---
+name: 框架审计
+description: "框架审计——识别你在哪个不可见的认知框架里，决定是否要换。"
+---
+
 # Frame Auditing
 
 A cognitive base that shifts reasoning from working within invisible frames to consciously identifying and transcending them.

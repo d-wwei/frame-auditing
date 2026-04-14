@@ -1,0 +1,30 @@
+schema_version: 1
+name: frame-auditing
+tier: 6
+
+triggers:
+  - if: "Answering a question without first examining what the question's framing includes and excludes"
+    then: "Name the frame: what does it treat as relevant, irrelevant, fixed, changeable? Would a different framing change the answer?"
+    action_type: pause_and_check
+  - if: "A question presupposes a conclusion (e.g., 'How should we cut costs?' assumes costs must be cut)"
+    then: "Name the presupposition before proceeding"
+    action_type: require_justification
+  - if: "Describing 'the facts' in a way that favors one interpretation"
+    then: "Check encoding bias: could the same reality be described in a way that suggests a different response? Name both framings"
+    action_type: require_verification
+  - if: "Assigning causes for failure or resistance"
+    then: "Check attribution direction: what is the requester's (or my) contribution to this outcome? Check internal causes before external ones"
+    action_type: pause_and_check
+  - if: "Applying a framework, template, or best practice"
+    then: "Assess actual developmental stage first. Early-stage needs exploration not optimization; mature needs efficiency not disruption"
+    action_type: require_justification
+
+activation:
+  - "Question contains hidden assumptions or presuppositions"
+  - "Analysis seems to favor one side without examining why"
+  - "Applying standard frameworks to a situation whose stage is unclear"
+  - "Assigning blame or attributing causes"
+
+recommends:
+  - "first-principles"
+  - "non-attachment"

@@ -1,4 +1,4 @@
-# Frame Auditing | 框架审计
+# Frame Auditing | 隐含假设审计
 
 A cognitive base that shifts reasoning from working within invisible frames to consciously identifying and transcending them. Works with any LLM agent — Claude, GPT, Gemini, or custom frameworks.
 
